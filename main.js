@@ -10,6 +10,41 @@ const closeMenuInfo = document.querySelector(".info-product-detail-close");
 
 
 
+navmenu.addEventListener("click", toggleMenuDesktop);
+burguerMenu.addEventListener("click", toggleMenuMobile);
+menuCarritoIcon.addEventListener("click", toggleCarrito);
+closeMenuInfo.addEventListener("click", removeMenuInfo);
+function toggleMenuDesktop() {
+  aside.classList.add("inactive");
+  productDetailsContainer.classList.add("inactive");
+  desktopMenu.classList.toggle("inactive");
+
+}
+
+function toggleMenuMobile() {
+  aside.classList.add("inactive");
+  productDetailsContainer.classList.add("inactive");
+  menuMobile.classList.toggle("inactive");
+
+}
+
+function toggleCarrito() {
+  menuMobile.classList.add("inactive");
+  desktopMenu.classList.add("inactive");
+  productDetailsContainer.classList.add("inactive");
+  aside.classList.toggle("inactive");
+}
+function openProductDetails(){
+    productDetailsContainer.classList.remove("inactive");
+    menuMobile.classList.add("inactive");
+    desktopMenu.classList.add("inactive");
+    aside.classList.add("inactive");
+
+}
+
+function removeMenuInfo(){
+    productDetailsContainer.classList.add("inactive");
+}
 const productoList = [];
 
 productoList.push({
