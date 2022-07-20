@@ -5,26 +5,10 @@ const desktopMenu = document.querySelector(".desktop-menu");
 const menuMobile = document.querySelector(".mobile-menu");
 const aside = document.querySelector(".product-detail");
 const cardsContainer = document.querySelector(".cards-container");
+const productDetailsContainer = document.querySelector(".info-product-detail");
+const closeMenuInfo = document.querySelector(".info-product-detail-close");
 
-navmenu.addEventListener("click", toggleMenuDesktop);
-burguerMenu.addEventListener("click", toggleMenuMobile);
-menuCarritoIcon.addEventListener("click", toggleCarrito);
 
-function toggleMenuDesktop() {
-  aside.classList.add("inactive");
-  desktopMenu.classList.toggle("inactive");
-}
-
-function toggleMenuMobile() {
-  aside.classList.add("inactive");
-  menuMobile.classList.toggle("inactive");
-}
-
-function toggleCarrito() {
-  menuMobile.classList.add("inactive");
-  desktopMenu.classList.add("inactive");
-  aside.classList.toggle("inactive");
-}
 
 const productoList = [];
 
